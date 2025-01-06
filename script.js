@@ -4,6 +4,12 @@ function createGrid(number) {
         let div = document.createElement("div")
         div.classList.add("square")
         gridContainer.appendChild(div)
+
+        /* change div color once hovered over */
+        div.addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = "black"
+        })
+
     }
 }
 
