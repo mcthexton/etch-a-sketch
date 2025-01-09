@@ -35,7 +35,3 @@ function generateGrid(number) {
 } 
 
 generateGrid()
-
-/* started to work with generate grid button & realized I needed to perfect my create Grid. */
-
-/*container.replaceChildren() before the loop*/
