@@ -1,14 +1,12 @@
 function createGrid(number) {
     const gridContainer = document.querySelector("#grid-container")
-    for (let i = 0; i < number; i++) {
+    const squareSize = 960 / number
+    for (let i = 0; i < number * number; i++) {
         let row = document.createElement("div")
         row.classList.add("row")
+        row.style.width = `${squareSize}px`
+        row.style.height = `${squareSize}px`
         gridContainer.appendChild(row)
-        for (let j = 1; j <= number; j++) {
-            let column = document.createElement("div")
-            column.classList.add("column")
-            row.appendChild(column)
-        }
 
         /* change div color once hovered over */
         row.addEventListener("mouseover", (event) => {
@@ -17,7 +15,7 @@ function createGrid(number) {
     }
 }
 
-createGrid(16)
+createGrid(75)
 
 function generateGrid(number) {
     const gridBtn = document.getElementById("gridBtn")

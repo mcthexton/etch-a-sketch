@@ -1,22 +1,16 @@
 #grid-container {
     display: flex;
-    /* flex-wrap: wrap; */
-    align-items: center;
-    justify-content: center;
-    width: 850px;
-    height: 850px;
-    padding: 100px;
+    flex-wrap: wrap;
+    border: 1px solid pink;
+    height: 960px;
+    width: 960px;
 }
 
-.row .column {
-    height: 50px;
-    width: 50px;
+.row {
+    box-sizing: border-box;
     border: 1px solid black;
-    flex: 1 1 auto;
 }
 
 #gridBtn  {
 
 }
-
-/* added flex to .square */
