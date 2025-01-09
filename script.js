@@ -1,5 +1,6 @@
+const gridContainer = document.querySelector("#grid-container")
+
 function createGrid(number) {
-    const gridContainer = document.querySelector("#grid-container")
     const squareSize = 960 / number
     for (let i = 0; i < number * number; i++) {
         let row = document.createElement("div")
@@ -15,7 +16,7 @@ function createGrid(number) {
     }
 }
 
-createGrid(75)
+createGrid(16)
 
 function generateGrid(number) {
     const gridBtn = document.getElementById("gridBtn")
@@ -26,9 +27,12 @@ function generateGrid(number) {
     if (userInput > 100) {
         alert("You can't go higher than 100")
         return
+    } else {
+        gridContainer.replaceChildren()
+        createGrid(userInput)
     }
     })
-}
+} 
 
 generateGrid()
 
